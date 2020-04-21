@@ -4,24 +4,24 @@ import java.util.ArrayList;
  * Created by staff on 7/10/17.
  */
 public class Rectangle {
-    private int height;
-    private int width;
+    private int mheight;
+    private int mwidth;
     private static ArrayList<Rectangle> mInstances = new ArrayList<>();
     private Boolean shape;
 
     public Rectangle(int height, int width) {
-        this.height = height;
-        this.width = width;
+        this.mheight = height;
+        this.mwidth = width;
         this.shape = isRectSquare();
         mInstances.add(this);
     }
 
     public int getHeight() {
-        return height;
+        return mheight;
     }
 
     public int getWidth() {
-        return width;
+        return mwidth;
     }
     public static ArrayList<Rectangle> getAll() {
         return mInstances;
@@ -32,7 +32,7 @@ public class Rectangle {
     }
 
     public boolean isRectSquare(){
-        if (height == width){
+        if (mheight == mwidth){
          return true;
         }
         else {
@@ -40,4 +40,7 @@ public class Rectangle {
         }
     }
 
+    public int area() {
+        return mheight*mwidth;
+    }
 }

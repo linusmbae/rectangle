@@ -1,7 +1,14 @@
+plugins
+        {
+            id 'java'
+            id 'application'
+        }
 group 'rectangles'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
+
+mainClassName='App'
 
 sourceCompatibility = 1.8
 
